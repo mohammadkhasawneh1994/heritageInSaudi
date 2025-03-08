@@ -1,0 +1,56 @@
+/* Carousel Item */
+.carousel-item {
+  height: 100vh; /* Full height of the viewport */
+  min-height: 350px;
+  position: relative; /* Ensures absolute positioning of the image and caption */
+}
+
+/* Carousel Image Zoom (Background Image) */
+.carousel-image-zoom {
+  width: 100%;
+  height: 100%;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute; /* Position it absolutely within the carousel-item */
+  top: 0;
+  left: 0;
+
+  animation-name: slider-zoom, slider-grayscale;
+  animation-fill-mode: forwards; /* Keeps the final state after animation */
+  animation-duration: 2s, 2s; /* Fast animation */
+  animation-iteration-count: 1, 1;
+  animation-timing-function: ease-in-out; /* Smooth transition */
+}
+
+/* Animation for Zoom Effect */
+@keyframes slider-zoom {
+  from { transform: scale(1, 1); }
+  to { transform: scale(1.25, 1.25); }
+}
+
+/* Animation for Grayscale Effect */
+@keyframes slider-grayscale {
+  from { filter: grayscale(20%); }
+  to { filter: grayscale(5%); }
+}
+
+/* Optional: If you need the captions */
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff; /* White text for better visibility */
+}
+
+/* Adjust the Carousel Slide Transition (speed of fading) */
+.carousel-fade .carousel-item {
+  width: 100%;
+  transition-duration: .5s; /* Faster transition */
+  transition-timing-function: ease-in-out;
+  transition-property: opacity;
+  animation-fill-mode: initial;
+}
