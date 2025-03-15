@@ -1,0 +1,46 @@
+.next-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px; /* Space after last card */
+}
+
+.clickable-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 900px; 
+  padding: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  backdrop-filter: blur(6px)
+}
+
+.next-image {
+  width: 86px;
+  height: auto;
+  margin-right: -10px;
+}
+
+.next-text {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+@media (max-width: 600px) {
+  .clickable-image {
+    max-width: 100%; 
+    padding: 10px;
+  }
+
+  .next-image {
+    width: 40px;
+  }
+
+  .next-text {
+    font-size: 16px;
+  }
+}

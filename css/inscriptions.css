@@ -69,20 +69,22 @@ body {
   font-weight: 600;
   color: #7e5843;
 }
+
+
 .card__button {
-  background-color: #7e5843; /* Dark background */
-  color: white; /* White text */
+  background-color: #7e5843; 
+  color: white; 
   border: none; /* No border */
-  padding: 15px 30px; /* Padding around text */
-  font-size: 16px; /* Text size */
-  font-weight: 600; /* Bold text */
-  border-radius: 8px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s ease; /* Smooth transition on hover */
+  padding: 15px 30px; 
+  font-size: 16px; 
+  font-weight: 600;
+  border-radius: 8px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
 }
 
 .card__button:hover {
-  background-color: #d5c298; /* Lighter dark blue on hover */
+  background-color: #d5c298;
 }
 
 .card__description {

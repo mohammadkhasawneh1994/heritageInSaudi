@@ -1,14 +1,17 @@
 body {
+    direction: rtl;
+    text-align: right;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #e0d5bd;
+    background-image: url(".././images/image10.jpeg");
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+  
 }
 .card-container {
     display: flex;
@@ -35,6 +38,19 @@ body {
     transition: transform 0.2s, width 0.2s, height 0.2s;
     position: relative;
 }
+iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+#mapContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
 .card:hover {
     transform: scale(1.05);
 }
@@ -58,35 +74,32 @@ p {
     font-weight: 300;
     font-size: 22px;
     line-height: 24px !important;
+    color: #ffffff
     
 }
-.p-color{
-    color: #7e5843;
-}
+
 h2 {
     font-size: 37px !important;
+    color: #ffffff
     
 }
-.h2-color{
-    color: #9a6d4c;
-}
+
 .description-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 20px auto;
-    height: 70vh;
+    height: 90vh; 
     width: 90vw;
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px;
     transition: all 0.3s ease;
+    overflow: hidden;
+    backdrop-filter: blur(63px)
+
 }
-iframe {
-    width: 600px;
-    height: 450px;
-    border: 0;
-}
+
 #nextPhaseButton {
     background-color: #7e5843;
     color: white;
@@ -101,15 +114,15 @@ iframe {
 #nextPhaseButton:hover {
     background-color: #b07251;
 }
-.description-image {
+/* /* .description-image {
     width: 100%;
     width: 90vw;
     height: 100%;
     background-size: cover;
     background-position: center;
     margin-bottom: 20px;
-}
-@media (max-width: 600px) {
+} */
+@media (max-width: 600px) { */
     .card {
         width: 150px;
         height: 100px;
