@@ -1,36 +1,27 @@
 <!DOCTYPE html>
 <html lang="ar">
-    <head>
-       
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-      
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-     
-        <title>التراث العمراني</title>
-        <meta name="keywords" content="">
-        <meta name="description" content="">
-        <meta name="author" content="">
-      
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
- 
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-
-        <link rel="stylesheet" href="css/responsive.css">
-     
-        <link rel="icon" href="images/fevicon.png" type="image/gif" />
-       
-        <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet">
-      
-        <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-      
-        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-        <link rel="stylesheet" href="css/game.css">
-     </head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>التراث العمراني</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
 <body>
-    <h1>🎨 لعبة التراث السعودي 🎨</h1>
+    <h1 style="text-align: center;">🎨 لعبة التراث السعودي 🎨</h1>
+    
+    <div id="fireworks-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; display: none;"></div>
     
     <div id="game-container">
         <div class="question" data-answer="القط العسيري">
@@ -46,16 +37,16 @@
             <img src="images/image05.jpeg" alt="الأبواب النجدية">
             <div class="options">
                 <button onclick="checkAnswer(this, 'الجصية الشرقية')">🎨 الجصية الشرقية</button>
-                <button onclick="checkAnswer(this, 'الأبواب النجدية')">🚪 الأبواب النجدية</button>
                 <button onclick="checkAnswer(this, 'الروشان الحجازي')">🏠 الروشان الحجازي</button>
+                <button onclick="checkAnswer(this, 'الأبواب النجدية')">🚪 الأبواب النجدية</button>
             </div>
         </div>
 
         <div class="question" data-answer="الجصية الشرقية">
             <img src="images/image06.jpeg" alt="الجصية الشرقية">
             <div class="options">
-                <button onclick="checkAnswer(this, 'القط العسيري')">🎨 القط العسيري</button>
                 <button onclick="checkAnswer(this, 'الجصية الشرقية')">🖌️ الجصية الشرقية</button>
+                <button onclick="checkAnswer(this, 'القط العسيري')">🎨 القط العسيري</button>
                 <button onclick="checkAnswer(this, 'السدو الشمالي')">🧵 السدو الشمالي</button>
             </div>
         </div>
@@ -64,20 +55,20 @@
             <img src="images/image07.jpeg" alt="الروشان الحجازي">
             <div class="options">
                 <button onclick="checkAnswer(this, 'السدو الشمالي')">🧵 السدو الشمالي</button>
-                <button onclick="checkAnswer(this, 'الروشان الحجازي')">🏠 الروشان الحجازي</button>
                 <button onclick="checkAnswer(this, 'الجصية الشرقية')">🎨 الجصية الشرقية</button>
+                <button onclick="checkAnswer(this, 'الروشان الحجازي')">🏠 الروشان الحجازي</button>
             </div>
         </div>
     </div>
-    <div id="win-message" style="display: none;">
-        <img src="shibr.gif" alt="شبر" class="shibr-animation">
-        <p>🎉 مبروك! لقد أجبت على جميع الأسئلة بشكل صحيح 🎉</p>
-    </div>
-    <button id="next-round" onclick="nextRound()" style="display: none;">🚀 الانتقال إلى الجولة الثانية</button>
+
+  
+    
 
     <audio id="correct-sound" src="images/correct.mp3"></audio>
     <audio id="wrong-sound" src="images/wrong.mp3"></audio>
-
+    
     <script src="js/game.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js/dist/index.min.js"></script>
 </body>
 </html>

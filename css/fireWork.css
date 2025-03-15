@@ -1,0 +1,106 @@
+
+:root {
+    --Dark-Black: rgba(0, 0, 0, .7);
+    --Oxford-Blue: #0b4988;
+  }
+  
+
+  :root {
+    --initialSize: 2vmin;
+  }
+  
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    background-image: url(../images/image33.jpeg);
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    height: 100vh; 
+    width: 100vw;
+    margin: 0;
+    overflow: hidden;
+}
+
+  
+
+  .firework {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    width: var(--initialSize);
+    background-size: var(--initialSize) var(--initialSize);
+    background-repeat: no-repeat;
+    aspect-ratio: 1;
+  }
+  .answer-text {
+    font-size: 2rem;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+
+#nextLevelBtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(103, 80, 44);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+#nextLevelBtn:before {
+    content: "🎆 ";
+    font-size: 1.5rem;
+}
+#nextLevelBtn:after {
+    content: " 🎆";
+    font-size: 1.5rem;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+.firework-button {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    border-radius: 50%;
+    animation: explode 1.5s infinite ease-in-out;
+}
+
+@keyframes explode {
+    0% {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+  

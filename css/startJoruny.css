@@ -25,6 +25,19 @@ body {
     background-size: cover;
     background-position: center;
     transition: transform 1s ease-in-out;
+    opacity: 0;
+    animation: slideIn 2s forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .slide img {
@@ -42,17 +55,30 @@ body {
     padding: 2em;
     border-radius: 10px;
     max-width: 60%;
+    opacity: 0;
+    animation: fadeIn 1s forwards 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .text-box h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
+    color: white;
 }
 
 .text-box p {
     font-size: 1.2rem;
     line-height: 1.5;
     margin-bottom: 1.5rem;
+    color: white;
 }
 
 .btn {
@@ -66,16 +92,22 @@ body {
     transition: all 0.3s;
     text-decoration: none;
     display: inline-block;
+    opacity: 0;
+    animation: fadeIn 1s forwards 2s;
 }
+
+.btn:hover {
+    background-color: #d89069;
+    transform: scale(1.1);
+}
+
 .next-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
-}
-
-.clickable-image {
-    text-decoration: none;
+    opacity: 0;
+    animation: fadeIn 1s forwards 2s;
 }
 
 .next-box {
@@ -111,11 +143,6 @@ body {
     text-align: center;
     z-index: 1;
     padding: 10px;
-}
-
-.btn:hover {
-    background-color: #d89069;
-    transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
