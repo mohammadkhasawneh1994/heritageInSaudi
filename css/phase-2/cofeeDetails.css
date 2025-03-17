@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-image: url(".././images/image10.jpeg");
+    background-image: url("../../images/phase02-11.jpg");
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,7 +101,7 @@ h2 {
 }
 
 #nextPhaseButton {
-    background-color: #7e5843;
+    background-color: #51985b;
     color: white;
     font-size: 16px;
     padding: 12px 25px;
@@ -112,7 +112,7 @@ h2 {
 }
 
 #nextPhaseButton:hover {
-    background-color: #b07251;
+    background-color: #aeffab;
 }
 /* /* .description-image {
     width: 100%;
@@ -131,7 +131,4 @@ h2 {
         width: 200px;
         height: 150px;
     }
-    .space {
-        height: 10vh;
-      }
 }

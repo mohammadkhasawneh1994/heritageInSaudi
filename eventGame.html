@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>التراث العمراني</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <body>
+        <h1 style="text-align: center;">🎵 اضغط على الأداة الموسيقية واختر الإجابة الصحيحة 🎵</h1>
+        <div id="game-container">
+
+
+            <div class="question" data-answer="طبلة">
+                <img src="images/tableh.webp" alt="طبلة" onclick="playSound('tabl')">
+                <div class="options">
+                    <button onclick="checkAnswer(this, 'دف')">🥁 دف</button>
+                    <button onclick="checkAnswer(this, 'طبلة')">🪘 طبلة</button>
+                    <button onclick="checkAnswer(this, 'مرواس')">🎶 مرواس</button>
+                </div>
+            </div>
+            
+            <div class="question" data-answer="دف">
+                <img src="images/daff.jpeg" alt="دف" onclick="playSound('duff')">
+                <div class="options">
+                    <button onclick="checkAnswer(this, 'كمان')">🎻 كمان</button>
+                    <button onclick="checkAnswer(this, 'مرواس')">🎶 مرواس</button>
+                    <button onclick="checkAnswer(this, 'دف')">🥁 دف</button>
+                </div>
+            </div>
+            
+            <div class="question" data-answer="مرواس">
+                <img src="images/mereas.webp" alt="مرواس" onclick="playSound('mirwas')">
+                <div class="options">
+                    <button onclick="checkAnswer(this, 'مرواس')">🎶 مرواس</button>
+                    <button onclick="checkAnswer(this, 'طبلة')">🪘 طبلة</button>
+                    <button onclick="checkAnswer(this, 'كمان')">🎻 كمان</button>
+                </div>
+            </div>
+        </div>
+       
+        
+       
+        <audio id="correct-sound" src="images/correct.mp3"></audio>
+        <audio id="wrong-sound" src="images/wrong.mp3"></audio>    
+        <audio id="tabl" src="tabl_sound.mp3"></audio>
+        <audio id="duff" src="duff_sound.mp3"></audio>
+        <audio id="mirwas" src="mirwas_sound.mp3"></audio>
+        <audio id="correct-sound" src="correct.mp3"></audio>
+        <audio id="wrong-sound" src="wrong.mp3"></audio>
+        
+        <script>
+            function playSound(id) {
+                let sound = document.getElementById(id);
+                sound.play();
+            }
+        </script>
+    <script src="js/game.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js/dist/index.min.js"></script>
+</body>
+</html>

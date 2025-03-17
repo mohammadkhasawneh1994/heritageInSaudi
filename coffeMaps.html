@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>التراث السعودي</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2:400,600,700|Poppins:400,600,700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
+    <link rel="stylesheet" href="css/phase-2/cofeeDetails.css" />
+</head>
+
+<body>
+    <h2>مزارع القهوة السعودية في المنطقة الجنوبية</h2>
+    <div class="card-container">
+        <div class="card active" style="background-image: url('images/phase02-11.jpg')"
+            onclick="showDescription(this,'الداير بني مالك', 'تُعتبر منطقة بني مالك، وخاصة محافظة الداير، من أروع المناطق في المملكة العربية السعودية 🌴، التي تشتهر بزراعة البن الخولاني الأصيل. هذا البن الذي يجسد التراث والجودة يتمتع بسمعة عالمية بفضل نكهته المميزة وعراقته التاريخية.', 'images/phase02-11.jpg', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15234.32325351569!2d43.12047484074123!3d17.33576298062956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15fd09007e628e33%3A0x24601226c23efb0d!2z2YXYstix2LnYqSDYp9mE2YjYp9it2Kkg2KfZhNix2YrZgdmK2Kkg2KjYp9mE2K_Yp9mK2LE!5e0!3m2!1sen!2sjo!4v1742208602881!5m2!1sen!2sjo')">
+            <div class="card-title">الداير بني مالك</div>
+        </div>
+        <div class="card" style="background-image: url('images/phase02-13.webp')"
+            onclick="showDescription(this, 'مزارع جبال فيفا', 'تتميّز جبال فِيفَا أو كما يطلق عليها جارة القمر بإطلالتها الساحرة، بارتفاع يزيد عن 1,800 كلم عن سطح البحر، وهي سلسلة من الجبال الملتفّة حول بعضها، تشتهر جبال فيفا بالزراعة، وبتنوّع محاصيلها الموسمية، مثل: الحبوب، والفواكه، والخضراوات، والنباتات العطرية، وغيرها، ولعلّ من أشهرها البُن، إذ يعدّ من أجود أنواع البُن في السعودية.  ', 'images/phase02-13.webp', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63767.67802673727!2d43.07013470179468!3d17.23632884142754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15fd0b9098b1fa11%3A0x2ee53bac47f10964!2z2YXYstix2LnYqSDYo9i12YjZhCDYp9mE2KjZhiDZgdmK2YHYp9ih!5e0!3m2!1sen!2sjo!4v1742218442542!5m2!1sen!2sjo')">
+            <div class="card-title">مزارع جبال فيفا</div>
+        </div>
+    </div>
+    <button id="nextPhaseButton" style="display: none" onclick="nextPhase()">
+        المرحلة التالية
+    </button>
+    <div id="descriptionCard" class="description-card" style="display: flex">
+        <div id="descriptionImage" class="description-image" style="background-image: url('images/phase02-11.jpg')"></div>
+        <h2 id="descriptionTitle">الداير بني مالك</h2>
+        <p id="descriptionText">
+            تُعتبر منطقة بني مالك، وخاصة محافظة الداير، من أروع المناطق في المملكة العربية السعودية 🌴، التي تشتهر بزراعة البن الخولاني الأصيل. هذا البن الذي يجسد التراث والجودة يتمتع بسمعة عالمية بفضل نكهته المميزة وعراقته التاريخية.', </p>
+        <div id="mapContainer" style="display: block">
+            <iframe id="mapIframe"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15234.32325351569!2d43.12047484074123!3d17.33576298062956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15fd09007e628e33%3A0x24601226c23efb0d!2z2YXYstix2LnYqSDYp9mE2YjYp9it2Kkg2KfZhNix2YrZgdmK2Kkg2KjYp9mE2K_Yp9mK2LE!5e0!3m2!1sen!2sjo!4v1742208602881!5m2!1sen!2sjo"
+                width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <!-- <div class="next-container">
+            <a href="urbanMagic.html" class="clickable-image">
+              <img class="next-image" src="images/clickHere.png" alt="التالي" />
+              <span class="next-text">الجولة التالية</span>
+            </a>
+          </div> -->
+    </div>
+
+    <script>
+        function showDescription(element, title, description, imageUrl, mapUrl) {
+            document
+                .querySelectorAll(".card")
+                .forEach((card) => card.classList.remove("active"));
+            element.classList.add("active");
+
+            document.getElementById("descriptionTitle").textContent = title;
+            document.getElementById("descriptionText").textContent = description;
+            document.getElementById(
+                "descriptionImage"
+            ).style.backgroundImage = `url(${imageUrl})`;
+
+            document.body.style.backgroundImage = `url(${imageUrl})`;
+            document.body.style.backgroundSize = "cover";
+            document.body.style.backgroundPosition = "center";
+            document.body.style.backgroundAttachment = "fixed";
+
+            document.getElementById("mapIframe").src = mapUrl;
+
+            if (title === "مزارع جبال فيفا") {
+                document.getElementById("nextPhaseButton").style.display = "block";
+            } else {
+                document.getElementById("nextPhaseButton").style.display = "none";
+            }
+        }
+        function nextPhase() {
+            window.location.href = "bunKholani.html";
+        }
+    </script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>

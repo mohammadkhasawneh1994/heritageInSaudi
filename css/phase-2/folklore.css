@@ -1,0 +1,49 @@
+body {
+    padding-top: 3px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    direction: rtl;
+    background-image: url('../../images/phase02-21.jpeg');
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    min-height: 100vh; 
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    backdrop-filter: blur(20px)
+}
+
+.container {
+    max-width: 80%;
+    margin: auto;
+    background: white;
+    padding: 41px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-wrapper {
+    display: flex;
+    padding-top: 9px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.image-container img {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-container {
+    flex: 1;
+    text-align: right;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
