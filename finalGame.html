@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>الملابس النسائية السعودية</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <h1 style="text-align: center;">👗 لعبة الملابس النسائية السعودية 👗</h1>
+    
+    <div id="fireworks-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; display: none;"></div>
+    
+    <div id="game-container">
+
+        <div class="question" data-answer="الثياب المصنوعة من الحرير">
+            <img src="images/middel.jpeg" alt="الثياب المصنوعة من الحرير">
+            <div class="options">
+                <button onclick="checkAnswer(this, 'ثوب المسدح')">🧥 ثوب المسدح</button>
+                <button onclick="checkAnswer(this, 'الثياب المصنوعة من الحرير')">✨ الثياب المصنوعة من الحرير</button>
+                <button onclick="checkAnswer(this, 'دراعة أم عصا')">🪭 دراعة أم عصا</button>
+            </div>
+        </div>
+
+        <div class="question" data-answer="الزبون">
+            <img src="images/northern.jpeg" alt="الزبون">
+            <div class="options">
+                <button onclick="checkAnswer(this, 'السدرة')">🌿 السدرة</button>
+                <button onclick="checkAnswer(this, 'الزبون')">👗 الزبون</button>
+                <button onclick="checkAnswer(this, 'ثوب المسدح')">🧵 ثوب المسدح</button>
+            </div>  
+        </div>
+
+        <div class="question" data-answer="السدرة">
+            <img src="images/southern.jpeg" alt="السدرة">
+            <div class="options">
+                <button onclick="checkAnswer(this, 'الزبون')">👗 الزبون</button>
+                <button onclick="checkAnswer(this, 'دراعة أم عصا')">🪭 دراعة أم عصا</button>
+                <button onclick="checkAnswer(this, 'السدرة')">🌿 السدرة</button>
+            </div>
+        </div>
+
+
+        <div class="question" data-answer="ثوب المسدح">
+            <img src="images/western.jpeg" alt="ثوب المسدح">
+            <div class="options">
+                <button onclick="checkAnswer(this, 'ثوب المسدح')">🧥 ثوب المسدح</button>
+                <button onclick="checkAnswer(this, 'الثياب المصنوعة من الحرير')">✨ الثياب المصنوعة من الحرير</button>
+                <button onclick="checkAnswer(this, 'السدرة')">🌿 السدرة</button>
+            </div>
+        </div>
+        <div class="question" data-answer="دراعة أم عصا">
+            <img src="images/oriental.jpeg" alt="دراعة أم عصا">
+            <div class="options">
+                <button onclick="checkAnswer(this, 'الزبون')">👗 الزبون</button>
+                <button onclick="checkAnswer(this, 'دراعة أم عصا')">🪭 دراعة أم عصا</button>
+                <button onclick="checkAnswer(this, 'السدرة')">🌿 السدرة</button>
+            </div>
+        </div>
+
+    </div>
+
+    <audio id="correct-sound" src="images/correct.mp3"></audio>
+    <audio id="wrong-sound" src="images/wrong.mp3"></audio>
+    
+    <script src="js/phase3/game.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js/dist/index.min.js"></script>
+</body>
+</html>

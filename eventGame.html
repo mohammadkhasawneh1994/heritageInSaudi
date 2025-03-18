@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,13 +13,16 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="icon" href="images/fevicon.png" type="image/gif" />
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2:400,600,700|Poppins:400,600,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <link rel="stylesheet" href="css/game.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
+
 <body>
+
     <body>
         <h1 style="text-align: center;">🎵 اضغط على الأداة الموسيقية واختر الإجابة الصحيحة 🎵</h1>
         <div id="game-container">
@@ -32,7 +36,7 @@
                     <button onclick="checkAnswer(this, 'مرواس')">🎶 مرواس</button>
                 </div>
             </div>
-            
+
             <div class="question" data-answer="دف">
                 <img src="images/daff.jpeg" alt="دف" onclick="playSound('duff')">
                 <div class="options">
@@ -41,7 +45,7 @@
                     <button onclick="checkAnswer(this, 'دف')">🥁 دف</button>
                 </div>
             </div>
-            
+
             <div class="question" data-answer="مرواس">
                 <img src="images/mereas.webp" alt="مرواس" onclick="playSound('mirwas')">
                 <div class="options">
@@ -51,25 +55,68 @@
                 </div>
             </div>
         </div>
-       
-        
-       
+
+
+
         <audio id="correct-sound" src="images/correct.mp3"></audio>
-        <audio id="wrong-sound" src="images/wrong.mp3"></audio>    
+        <audio id="wrong-sound" src="images/wrong.mp3"></audio>
         <audio id="tabl" src="tabl_sound.mp3"></audio>
         <audio id="duff" src="duff_sound.mp3"></audio>
         <audio id="mirwas" src="mirwas_sound.mp3"></audio>
         <audio id="correct-sound" src="correct.mp3"></audio>
         <audio id="wrong-sound" src="wrong.mp3"></audio>
-        
+
         <script>
             function playSound(id) {
                 let sound = document.getElementById(id);
                 sound.play();
             }
+
+
+            let correctAnswers = 0;
+            const totalQuestions = document.querySelectorAll('.question').length;
+
+            function checkAnswer(button, answer) {
+                const questionDiv = button.closest('.question');
+                const correctAnswer = questionDiv.getAttribute('data-answer');
+
+                if (answer === correctAnswer) {
+                    button.classList.add("correct");
+                    button.disabled = true;
+                    correctAnswers++;
+
+
+                    document.getElementById("correct-sound").play();
+
+
+                    let buttons = questionDiv.querySelectorAll("button");
+                    buttons.forEach(btn => btn.disabled = true);
+
+
+                    if (correctAnswers === totalQuestions) {
+                        startFireworks();
+                    }
+                } else {
+
+                    document.getElementById("wrong-sound").play();
+                    alert("❌ إجابة خاطئة! حاول مرة أخرى.");
+                }
+            }
+
+            function nextRound() {
+                alert("🚀 انتقلت إلى الجولة الثانية!");
+
+            }
+
+            function startFireworks() {
+
+                setTimeout(function () {
+                    window.location.href = 'firWorkPhase2.html';
+                }, 1000);
+            }
         </script>
-    <script src="js/game.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fireworks-js/dist/index.min.js"></script>
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://cdn.jsdelivr.net/npm/fireworks-js/dist/index.min.js"></script>
+    </body>
+
 </html>
