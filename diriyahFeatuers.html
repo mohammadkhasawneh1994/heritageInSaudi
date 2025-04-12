@@ -37,17 +37,11 @@
       <div
         class="card"
         style="background-image: url('images/image11.jpeg')"
-        onclick="showDescription(this, 'حي البحيري', 'حي البحيري هو من المناطق التاريخية المميزة في الدرعية. يضم مجموعة من المباني الطينية القديمة التي تمتاز بالتصميم المعماري التقليدي والذي يبرز فيه الطين واللبن، بالإضافة إلى أسقف مدعومة بجذوع النخيل.', 'images/image11.jpeg', 'https://www.google.com/maps/embed?pb=!4v1741378363994!6m8!1m7!1sCAoSLEFGMVFpcE9mTHg2cHNKNXltRldMelRDLVlUY0c3aEVzSkRodWhuTW0xZ1hU!2m2!1d24.733256029609!2d46.57379488553141!3f322.5829827487029!4f-5.376265186917507!5f0.7820865974627469')"
+        onclick="showDescription(this, 'حي البجيري', 'حي البجيري هو من المناطق التاريخية المميزة في الدرعية. يضم مجموعة من المباني الطينية القديمة التي تمتاز بالتصميم المعماري التقليدي والذي يبرز فيه الطين واللبن، بالإضافة إلى أسقف مدعومة بجذوع النخيل.', 'images/image11.jpeg', 'https://www.google.com/maps/embed?pb=!4v1741378363994!6m8!1m7!1sCAoSLEFGMVFpcE9mTHg2cHNKNXltRldMelRDLVlUY0c3aEVzSkRodWhuTW0xZ1hU!2m2!1d24.733256029609!2d46.57379488553141!3f322.5829827487029!4f-5.376265186917507!5f0.7820865974627469')"
       >
-        <div class="card-title">حي البحيري</div>
+        <div class="card-title">حي البجيري</div>
       </div>
-      <div
-        class="card"
-        style="background-image: url('images/image12.jpeg')"
-        onclick="showDescription(this, 'حي الطريف', 'من أبرز أحياء الدرعية التاريخية، وقد أُدرج في قائمة مواقع التراث العالمي لليونسكو عام 2010م. يضم الحي مجموعة من القصور والمباني التاريخية التي كانت مقرًا لحكام الدولة السعودية الأولى. يتميز بزخارف جصية إسلامية وأعمدة طينية مزينة، مع نقوش هندسية متكررة.', 'images/image12.jpeg', 'https://www.google.com/maps/embed?pb=!4v1741378239899!6m8!1m7!1sCAoSLEFGMVFpcFBuQ0lDTUM4MHI2YWFaaTFwbGhLZTU1YWhBSTQ0NktfWkV6eGdj!2m2!1d24.73698000498939!2d46.57563201370603!3f44.36357535912629!4f-0.26018014596306216!5f0.7820865974627469')"
-      >
-        <div class="card-title">حي الطريف</div>
-      </div>
+    
     </div>
     <button id="nextPhaseButton" style="display: none" onclick="nextPhase()">
       المرحلة التالية
@@ -68,7 +62,7 @@
       <div id="mapContainer" style="display: block">
         <iframe
           id="mapIframe"
-          src="https://www.google.com/maps/embed?pb=!4v1741380154166!6m8!1m7!1sCAoSLEFGMVFpcE96YXJTWW1WcG1tUFNLUFdNMTk4c19EX1Z6TWNOMFdaN211VmZI!2m2!1d24.73494861890147!2d46.57587409641823!3f43.77952842890038!4f12.903023890026176!5f0.7820865974627469"
+          src="https://www.google.com/maps/embed?pb=!4v1744465774901!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRHZudW5HTHc.!2m2!1d24.73357709514741!2d46.57468266669127!3f46.64215778630789!4f2.7572922566347557!5f1.1924812503605782"
           width="600"
           height="450"
           style="border: 0"
@@ -105,7 +99,7 @@
 
         document.getElementById("mapIframe").src = mapUrl;
 
-        if (title === "حي الطريف") {
+        if (title === "حي البجيري") {
           document.getElementById("nextPhaseButton").style.display = "block";
         } else {
           document.getElementById("nextPhaseButton").style.display = "none";

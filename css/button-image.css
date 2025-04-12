@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 50px; /* Space after last card */
+  margin-top: 50px;
 }
 
 .clickable-image {

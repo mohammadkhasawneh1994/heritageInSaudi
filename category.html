@@ -34,15 +34,33 @@
             <div class="laya-please layer-7"></div>
             <div class="laya-please layer-8"></div>
         </div>
-    
+        <div class="start-tour-container">
         <div id="start-tour" style="display: none;" class="start-tour-button" class="next-container">
             <a href="about.html" class="clickable-image">
                 <div class="next-box">
                     <img class="next-image" src="images/clickHere.png" alt="التالي" />
-                    <span class="next-text">هيا لبندأ الجولة</span>
+                    <span class="next-text">التراث العمراني</span>
                 </div>
             </a>
         </div>
+        <div id="start-tour-2" style="display: none;" class="start-tour-button"  class="next-container">
+            <a href="splashScreenPh-2.html" class="clickable-image">
+                <div class="next-box">
+                    <img class="next-image" src="images/clickHere.png" alt="التالي" />
+                    <span class="next-text"> الممارسات االاجتماعية و المناسبات</span>
+                </div>
+            </a>
+        </div>
+        <div id="start-tour-3" style="display: none;" class="start-tour-button" class="next-container">
+            <a href="splashScreenPh-3.html" class="clickable-image">
+                <div class="next-box">
+                    <img class="next-image" src="images/clickHere.png" alt="التالي" />
+                    <span class="next-text">الحرف اليدوية</span>
+                </div>
+            </a>
+        </div>
+    </div>
+      
        
     </div>
 
@@ -58,6 +76,30 @@
     
         document.getElementById("start-tour").addEventListener("click", function() {
             window.location.href = "about.html";
+        });
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const button = document.getElementById("start-tour-2");
+                button.style.display = "block";
+                console.log('Button shown after 1600ms');
+            }, 1500);
+        });
+
+    
+        document.getElementById("start-tour-2").addEventListener("click", function() {
+            window.location.href = "splashScreenPh-2.html";
+        });
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const button = document.getElementById("start-tour-3");
+                button.style.display = "block";
+                console.log('Button shown after 1700ms');
+            }, 1500);
+        });
+
+    
+        document.getElementById("start-tour-3").addEventListener("click", function() {
+            window.location.href = "splashScreenPh-3.html";
         });
     </script>
 
