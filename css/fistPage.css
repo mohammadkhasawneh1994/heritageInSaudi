@@ -17,19 +17,25 @@ html {
   .container2 {
     transform: scaleX(1.25);
   }
-  .start-tour-button {
-    padding: 10px 20px;
-    background-color: #fc7d48;
-    color: white;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    position: absolute; 
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
+
+.start-tour-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh;
+  flex-direction: column;
+}
+
+.start-tour-button {
+  padding: 10px 20px;
+  background-color: #fc7d48;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
 }
 
   .layer-1 {

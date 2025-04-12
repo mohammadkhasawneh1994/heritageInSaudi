@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>التراث السعودي</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="icon" href="images/fevicon.png" type="image/gif" />
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2:400,600,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" />
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
+  
+  <link rel="stylesheet" href="css/button-image.css" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    #mapContainer {
+      position: relative;
+      height: 100vh;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .next-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      z-index: 10;
+    }
+
+    .clickable-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 900px;
+      padding: 15px;
+      border-radius: 10px;
+      text-decoration: none;
+      backdrop-filter: blur(6px);
+    }
+
+    .next-image {
+      width: 86px;
+      height: auto;
+      margin-right: -10px;
+    }
+
+    .next-text {
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .clickable-image {
+        max-width: 100%;
+        padding: 10px;
+      }
+
+      .next-image {
+        width: 40px;
+      }
+
+      .next-text {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="mapContainer"></div>
+
+  <div class="next-container">
+    <a href="" id="nextButton" class="clickable-image">
+      <img class="next-image" src="images/clickHere.png" alt="التالي" />
+      <span class="next-text" id="nextText"></span>
+    </a>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const mapUrl = decodeURIComponent(params.get("link") || "");
+    const nextRoute = params.get("next");
+    const nextText = params.get("nextText");
+
+    if (mapUrl) {
+      const iframe = document.createElement("iframe");
+      iframe.src = mapUrl;
+      document.getElementById("mapContainer").appendChild(iframe);
+    } else {
+      document.getElementById("mapContainer").innerHTML = "<p>❌ لا يوجد خريطة.</p>";
+    }
+
+    if (nextRoute) {
+      document.getElementById("nextButton").href = nextRoute;
+    }
+
+    if (nextText) {
+      document.getElementById("nextText").textContent = decodeURIComponent(nextText);
+    }
+  </script>
+
+</body>
+</html>
