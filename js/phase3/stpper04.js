@@ -91,7 +91,7 @@ nextButton.addEventListener("click", () => {
         stepContent.innerHTML = stepDetails[currentStep - 1].content;
         stepImage.src = stepDetails[currentStep - 1].image;
     } else {
-        window.location.href = "wemon.html"; 
+        window.location.href = "nemTrip.html"; 
     }
 });
 
